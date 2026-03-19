@@ -1,13 +1,23 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
 
 # demorps
 
-The `demorps` package allows you to play Rock, Paper, Scissors against
-your computer in the R console.
+The `demorps` package allows you to play Rock, Paper, Scissors against your computer in the R console.
 
 ## Installation
 
-You can install the development version of demorps from
-[GitHub](https://github.com/) with:
+You can install the development version of demorps from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("pak")
@@ -18,15 +28,14 @@ pak::pak("laihoangson1411/R-package-for-demo")
 
 This is a basic example which shows you how to solve a common problem:
 
-``` r
+```{r example}
 library(demorps)
 
 ## basic example code
 # Play a simple game
 play_rps(c("rock", "scissors", "paper"))
-#> [1] "lose" "draw" "win"
 
 # Play against the copycat strategy
 play_rps(c("rock", "paper", "scissors", "rock"), strategy = "copycat")
-#> [1] "draw" "win"  "win"  "win"
 ```
+
